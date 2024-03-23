@@ -1,3 +1,4 @@
+package vari;
 
 public class EsArray1 {
     public static void main(String args[]) {

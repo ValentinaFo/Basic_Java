@@ -1,3 +1,4 @@
+package vari;
 
 public class SumMatriRow {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package vari;
+
 public class compare2 {
     public static void main(String[] args){
         char car = 'c';

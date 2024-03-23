@@ -5,17 +5,17 @@ package exceptions;
 
     public class Main {
 
-
         static void checkNum(int num) {
-            if (num > 18) {
+            if(num >=2 && num <=10) {
                 throw new ArithmeticException("Il numero selezionato ha superato il range");
             } else {
                 System.out.println("True! Il numero rientra nel range!");
             }
         }
-
         public static void main(String[] args) {
-            checkNum(34);
+            checkNum(80);
         }
+
+
     };
 

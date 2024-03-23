@@ -1,8 +1,8 @@
-//Scrivi un programma che contiene un metodo  confronti due numeri interi e determini se sono diversi.
+package vari;//Scrivi un programma che contiene un metodo  confronti due numeri interi e determini se sono diversi.
 //Il programma dovrà stampare a video i due valori e il risultato dell'eguaglianza.
 
 
-/*/public class compare1 {
+/*/public class vari.compare1 {
     public static void main (String[] args){
         int elemento = 3;
         int element = 5;

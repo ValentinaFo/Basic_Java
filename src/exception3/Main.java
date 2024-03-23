@@ -10,7 +10,7 @@ public class Main {
             int risultato = dividendo / divi;
             System.out.println("Il risultato della divisione è: " + risultato);
         } catch (ArithmeticException e) {
-            System.out.println("ERRORE. La divisione non è possibile" + e.getMessage());
+            System.out.println("ERRORE. La divisione per zero non è permessa. Dettagli errore: " + e.getMessage());
         }
     }
 }

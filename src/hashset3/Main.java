@@ -18,7 +18,7 @@ public class Main{
 
         System.out.println(numbers);
 
-                for(int i = 1; i <= 10; i++) {
+                for(int i = 0; i <= 10; i++) {
                     if (numbers.contains(i)) {
                         numbers.remove(i);
                         System.out.println(i + " Il numero è stato rimosso ");
