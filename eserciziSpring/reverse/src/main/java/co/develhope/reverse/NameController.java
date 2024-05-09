@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 
 public class NameController {
+    @CrossOrigin
     @GetMapping("/name")
     public String getName(
             @RequestParam String name) {
