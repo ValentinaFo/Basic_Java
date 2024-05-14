@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: hibernate
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        username: root
+        password:
+        url: jdbc:mariadb://localhost:3306/hibernate
+        jpa:
+            database: mysql
+            show_sql: true
+            hibernate:
+                ddl-auto: update
+        data:
+            rest:
+            basePath: /api
