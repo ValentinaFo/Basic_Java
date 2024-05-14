@@ -7,13 +7,13 @@ import jakarta.persistence.*;
 @Table(name = "classes")
 public class Class {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "title", nullable = false)
+    @Column(nullable = false)
     private String title;
 
-    @Column(name = "description", nullable = false)
+    @Column(nullable = false)
     private String description;
 
     public Long getId() {

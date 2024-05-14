@@ -2,15 +2,13 @@ spring:
     application:
         name: hibernate
     datasource:
-        driver-class-name: org.mariadb.jdbc.Driver
+        driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
         password:
-        url: jdbc:mariadb://localhost:3306/hibernate
-        jpa:
-            database: mysql
-            show_sql: true
-            hibernate:
-                ddl-auto: update
-        data:
-            rest:
-            basePath: /api
+        url: jdbc:mysql://127.0.0.1:3306/hibernate
+    jpa:
+        database: mysql
+        show_sql: true
+        hibernate:
+            ddl-auto: create-drop
+

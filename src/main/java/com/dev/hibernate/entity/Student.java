@@ -1,54 +1,30 @@
 package com.dev.hibernate.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "students")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "lastName", nullable = false)
+    @Column(nullable = false)
     private String lastName;
 
-    @Column(name = "firstName",nullable = false)
+    @Column(nullable = false)
     private String firstName;
 
-    @Column(name = "email",nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Override
     public String toString() {

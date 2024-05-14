@@ -1,33 +1,29 @@
 package com.dev.hibernate.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "enrollments")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Enrollment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Student student;
 
-    public Long getId() {
-        return id;
-    }
+    @ManyToOne
+    private Class class1;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public Student getStudent() {
-        return student;
-    }
 
-    public void setStudent(Student student) {
-        this.student = student;
-    }
 
 
 }
