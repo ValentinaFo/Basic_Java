@@ -1,0 +1,13 @@
+spring:
+    application:
+        name: Bop_blog
+datasource:
+    url: jdbc:mariadb://localhost:3306/bop_Blog
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
+    jpa:
+        database: mysql
+        show_sql: true
+        hibernate:
+            ddl-auto: create
