@@ -1,9 +1,9 @@
 package co.develhope.crudTestDemo.controllers;
-
 import co.develhope.crudTestDemo.entities.Student;
 import co.develhope.crudTestDemo.repositories.StudentRepository;
 import co.develhope.crudTestDemo.services.StudentService;
-import org.antlr.v4.runtime.misc.NotNull;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@RestController
+
 @RequestMapping("/student")
 public class StudentController {
 
@@ -22,25 +23,28 @@ public class StudentController {
 
 
 //(1) per creare un nuovo Student
-    @PostMapping("/")
+    @PostMapping
     public void createStudent(@RequestBody Student student){
         studentRepository.save(student);
     }
 
 
+
+
 //  (2) per ottenere la lista di tutti gli Student
-    @GetMapping("/list")
+    @GetMapping
     public List<Student> getList(){
     return studentRepository.findAll();
     }
 
 
 //(3) per prendere uno Student specifico passando primary key come path variable
-    @GetMapping("/{id}")
+    @GetMapping("/student/{id}")
     public Student getOneStudent(@PathVariable long id){
         Optional<Student> student = studentRepository.findById(id);
         return student.orElse(null);
     }
+
 
 
 //(4) per aggiornare uno Student:
@@ -56,7 +60,7 @@ public class StudentController {
 //(5) per aggiornare il valore isWorking value:
 //    passando primary key come path variable
 //    passando request param con nome working
-    @PutMapping("/{id}/working")
+    @PutMapping("/{id}/isWorking")
     public void setStudentWorking(@PathVariable long id, @RequestParam("isWorking") boolean isWorking){
         studentService.setStudentWorkStatus(id,isWorking);
 
