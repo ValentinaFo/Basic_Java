@@ -19,4 +19,10 @@ public class StudentService {
         studentRepository.save(student.get());
 
     }
+    public Student isWorkingSwitch(Long id, Boolean working){
+        Student findedUser = studentRepository.findById(id).get();
+        findedUser.setWorking(working);
+        studentRepository.saveAndFlush(findedUser);
+        return findedUser;
+    }
 }

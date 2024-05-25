@@ -18,4 +18,12 @@ public class Student {
     private String name;
     private String surname;
     private boolean isWorking;
+
+    public boolean getIsWorking() {
+        return isWorking;
+    }
+
+    public void setWorking(boolean working) {
+        isWorking = working;
+    }
 }
